@@ -16,6 +16,9 @@ return new class extends Migration
             $table->string('criteriaName');
             $table->text('criteriaDesc');
             $table->float('criteriaWeight');
+            // 1 untuk benefit
+            // 2 untuk cost
+            $table->enum('criteriaType', ['benefit', 'cost']);
             $table->timestamps();
         });
     }
