@@ -23,3 +23,5 @@ Route::get('/', function () {
 Route::get('/tes', [tes::class, 'index']);
 
 Route::get('/criteria', [CriteriaController::class, 'index']);
+Route::get('/criteria/edit/{id}', [CriteriaController::class, 'edit']);
+Route::post('/criteria/update/{id}', [CriteriaController::class, 'update']);
