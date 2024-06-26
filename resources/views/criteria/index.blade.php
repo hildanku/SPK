@@ -7,7 +7,7 @@
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h4 class="card-title">Manage Criterias</h4>
                     <div class="d-flex ">
-                        <!-- <a href="/criterias/create" class="btn btn-primary"> Create n</a> -->
+                         <a href="/criteria/create" class="btn btn-primary"> Create n</a>
                     </div>
                 </div>
                 <div class="card-body px-0 pb-0">
