@@ -16,8 +16,11 @@ return new class extends Migration
             $table->string('foodName');
             $table->text('foodDesc');
             $table->float('foodTasteRating');
-            $table->float('foodRiskDiseaseRating');
-            $table->float('foodAgeSuitability');
+            $table->float('foodRiskRating');
+            $table->float('foodAgeRating');
+            $table->float('foodPriceRating');
+            // jarak antara rumah ke makanan
+            $table->float('foodDistanceRating');
             $table->timestamps();
         });
     }
