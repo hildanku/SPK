@@ -67,21 +67,21 @@
                 </li> -->
                 <li class="sidebar-item  ">
 
-                    <a href="form-layout.html" class='sidebar-link'>
+                    <a href="/criterias" class='sidebar-link'>
                         <i data-feather="layout" width="20"></i> 
                         <span>Manage Criterias</span>
                     </a>
                 </li>
                 <li class="sidebar-item  ">
-                    <a href="form-editor.html" class='sidebar-link'>
+                    <a href="/foods" class='sidebar-link'>
                         <i data-feather="layers" width="20"></i> 
                         <span>Manage Foods</span>
                     </a>
                 </li>
                 <li class="sidebar-item  ">
-                    <a href="form-editor.html" class='sidebar-link'>
+                    <a href="/calc" class='sidebar-link'>
                         <i data-feather="layers" width="20"></i> 
-                        <span>Manage Score</span>
+                        <span>Score</span>
                     </a>
                 </li>
         </ul>
