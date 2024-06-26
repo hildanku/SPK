@@ -13,6 +13,25 @@ class CriteriaController extends Controller
         return view('criteria.index', compact('datas'));
     }
 
+    public function create()
+    {
+        return view('criteria.create');
+    }
+    public function store(Request $request)
+    {
+        $validateData = $request->validate([
+            'criteriaCode' => 'required',
+            'criteriaName' => 'required',
+            'criteriaDesc' => 'required',
+            'criteriaWeight' => 'required',
+            'criteriaType' => 'required',
+        ]);
+        $result = Criteria::create($validateData);
+        if (!$result) {
+            return redirect('/criteria/create')->with('error', 'Gagal menambah data!');
+        }
+        return redirect('/criterias')->with('success', 'Berhasilar menambah data!');
+    }
     public function edit($criteriaCode)
     {
         $data = Criteria::where('criteriaCode', $criteriaCode)->first();
@@ -33,7 +52,7 @@ class CriteriaController extends Controller
         if (!$result) {
             return redirect('/criteria/edit/' . $criteriaCode . '')->with('error', 'Gagal Update data!');
         }
-        return redirect('/criteria')->with('success', 'Berhasilar Update data!');
+        return redirect('/criterias')->with('success', 'Berhasilar Update data!');
 
     }
 }
