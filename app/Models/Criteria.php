@@ -16,5 +16,10 @@ class Criteria extends Model
         'criteriaName',
         'criteriaDesc',
         'criteriaWeight',
+        'criteriaType'
     ];
+    public function foods()
+    {
+        return $this->hasMany(Food::class, 'criteriaCode', 'criteriaCode');
+    }
 }
