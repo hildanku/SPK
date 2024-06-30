@@ -19,6 +19,7 @@
                                     <th>Criteria Name</th>
                                     <th>Criteria Description</th>
                                     <th>Criteria Weight</th>
+                                    <th>Criteria Type</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -29,6 +30,7 @@
                                     <td>{{ $data->criteriaName }}</td>
                                     <td>{{ $data->criteriaDesc }}</td>
                                     <td>{{ $data->criteriaWeight }}</td>
+                                    <td>{{ $data->criteriaType }}</td>
                                     <td>
                                         <a class="btn btn-primary" href="/criteria/{{ $data->criteriaCode }}">Edit</a>
                                         <a class="btn btn-danger" href="/criteria/delete/{{ $data->criteriaCode }}">Delete</a>
