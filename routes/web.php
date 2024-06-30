@@ -17,23 +17,23 @@ use App\Http\Controllers\SAWController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-// PR EDIT ROUTES ASSETS -- clear
-// BREAK ISYA
 
 Route::view('/', 'dashboard');
-Route::get('/criterias', [CriteriaController::class, 'index']);
-Route::get('/criteria/create', [CriteriaController::class, 'create']);
-Route::post('/criteria/store', [CriteriaController::class, 'store']);
-Route::get('/criteria/edit/{id}', [CriteriaController::class, 'edit']);
-Route::post('/criteria/update/{id}', [CriteriaController::class, 'update']);
+Route::controller(CriteriaController::class)->group(function () {
+    Route::get('/criterias', 'index');
+    Route::get('/criteria/create', 'create');
+    Route::post('/criteria/store', 'store');
+    Route::get('/criteria/edit/{id}', 'edit');
+    Route::post('/criteria/update/{id}', 'update');
+});
+Route::controller(FoodController::class)->group(function () {
+    Route::get('/foods', 'index');
+    Route::get('/food/edit/{id}', 'edit');
+    Route::post('/food/update/{id}', 'update');
+    Route::get('/food/create', 'create');
+    Route::post('/food/store', 'store');
+    Route::post('/food/delete/{id}', 'destroy');
+});
 
-Route::get('/foods', [FoodController::class, 'index']);
-Route::get('/food/edit/{id}', [FoodController::class, 'edit']);
-Route::post('/food/update/{id}', [FoodController::class, 'update']);
-Route::get('/food/create', [FoodController::class, 'create']);
-Route::post('/food/store', [FoodController::class, 'store']);
-Route::post('/food/delete/{id}', [FoodController::class, 'destroy']);
-
-Route::get('/calculate-saw-fake', [FoodController::class, 'calculateSAWWithFakeData']);
-
+Route::get('/calculate-saw-fake',  'calculateSAWWithFakeData');
 Route::get('/calc', [SAWController::class, 'index'])->name('calculate-saw');

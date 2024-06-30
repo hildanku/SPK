@@ -13,9 +13,6 @@ return new class extends Migration
     {
         Schema::create('foodScores', function (Blueprint $table) {
             $table->bigIncrements('foodScoreId');
-            $table->float('tasteScore');
-            $table->float('riskDiseaseScore');
-            $table->float('ageSuitabilityScore');
             $table->float('totalScore');
             $table->foreignId('foodId')->references('foodId')->on('foods');
             $table->timestamps();

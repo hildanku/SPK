@@ -17,3 +17,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+FAKE.php
+calculate.blade.php
+/database/migrations/2024_06_25_112021_food_scores.php
