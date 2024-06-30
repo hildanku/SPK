@@ -31,7 +31,6 @@
                 <th>Taste Rating</th>
                 <th>Risk Disease Rating</th>
                 <th>Age Suitability</th>
-                <th>Sawn</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -43,10 +42,8 @@
                 <td>{{ $data->foodTasteRating }}</td>
                 <td>{{ $data->foodRiskRating }}</td>
                 <td>{{ $data->foodAgeRating }}</td>
-                <td id="saw-score-{{ $data->foodId }}"> - </td> <td>
                 <td>
                   <a class="btn btn-primary" href="/food/edit/{{ $data->foodId }}">Edit</a>
-                  <a class="btn btn-danger" href="/food/delete/{{ $data->foodId }}">Delete</a>
                   <button type="button" class="btn btn-danger btn-sm delete-btn" data-food-id="{{ $data->foodId }}" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $data->foodId }}">
                     Delete
                   </button>
@@ -96,41 +93,6 @@
           $('#deleteModalLabel' + foodId).text('Delete Food');
           $('#deleteModal' + foodId).modal('show');
       });
-
-      // Function to calculate SAW
-      function calculateSAW() {
-          $.ajaxSetup({
-              headers: {
-                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-              }
-          });
-
-          $.ajax({
-              url: '/food/calculateSAW',
-              method: 'POST',
-              dataType: 'json',
-              success: function(response) {
-                  if (response.scores) {
-                      // Loop through each food data and update SAW score cell
-                      $('tbody tr').each(function(index, row) {
-                          const foodId = $(row).data('food-id'); // Assuming food ID is stored as data attribute
-                          const sawScore = response.scores[foodId];
-                          if (sawScore !== undefined) {
-                              $(row).find('#saw-score-' + foodId).text(sawScore.toFixed(2)); // Display score with 2 decimal places
-                          }
-                      });
-                  } else {
-                      alert('Error calculating SAW scores!');
-                  }
-              },
-              error: function(xhr, status, error) {
-                  alert('Failed to fetch SAW scores: ' + error);
-              }
-          });
-      }
-
-      // Call calculate SAW on page load
-      calculateSAW();
-  });
+    });
 </script>
 @endsection
