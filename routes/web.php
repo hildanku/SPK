@@ -28,12 +28,11 @@ Route::controller(CriteriaController::class)->group(function () {
 });
 Route::controller(FoodController::class)->group(function () {
     Route::get('/foods', 'index');
-    Route::get('/food/edit/{id}', 'edit');
+    Route::get('/food/edit/{id}', 'edit')->where('id', '[a-zA-Z0-9-_]+');
     Route::post('/food/update/{id}', 'update');
     Route::get('/food/create', 'create');
     Route::post('/food/store', 'store');
     Route::post('/food/delete/{id}', 'destroy');
 });
-
-Route::get('/calculate-saw-fake',  'calculateSAWWithFakeData');
+// <!-- Route::get('/calculate-saw-fake',  'calculateSAWWithFakeData'); -->
 Route::get('/calc', [SAWController::class, 'index'])->name('calculate-saw');
