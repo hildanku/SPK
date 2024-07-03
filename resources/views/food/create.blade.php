@@ -6,7 +6,7 @@
     <div class="col-md-6 col-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Create New Food</h4>
+          <h4 class="card-title">Insert new alternative</h4>
         </div>
         <div class="card-content">
           <div class="card-body">
@@ -27,37 +27,37 @@
                     <textarea class="form-control" id="foodDesc" name="foodDesc" rows="3" placeholder="Describe the Food" required></textarea>
                   </div>
                   <div class="col-md-4">
-                    <label for="foodTasteRating">Taste Rating </label>
+                    <label for="foodTasteRating">Taste Rating (benefit)</label>
                   </div>
                   <div class="col-md-8 form-group">
-                    <input type="number" class="form-control" id="foodTasteRating" name="foodTasteRating" placeholder="Enter Rating" required>
+                    <input type="number" class="form-control" id="foodTasteRating" name="foodTasteRating" placeholder="Enter Rating 1-10" required>
                   </div>
                   <div class="col-md-4">
-                    <label for="foodRiskDiseaseRating">Risk of Disease Rating</label>
+                    <label for="foodTasteRating">Taste Rating (benefit)</label>
                   </div>
                   <div class="col-md-8 form-group">
-                    <input type="number"class="form-control" id="foodRiskRating" name="foodRiskRating" placeholder="Enter Rating" required>
+                    <input type="number"class="form-control" id="foodRiskRating" name="foodRiskRating" placeholder="Enter Rating 1-10" required>
                   </div>
                   <div class="col-md-4">
-                    <label for="foodAgeSuitability">Age Suitability</label>
+                    <label for="foodAgeSuitability">Age Rating(benefit)</label>
                   </div>
                   <div class="col-md-8 form-group">
-                    <input type="text" class="form-control" id="foodAgeRating" name="foodAgeRating" placeholder="E.g., All Ages, Adults Only" required>
+                    <input type="text" class="form-control" id="foodAgeRating" name="foodAgeRating" placeholder="Enter Rating 1-10" required>
                   </div>
                   <div class="col-md-4">
-                    <label for="foodPrice">Price</label>
+                    <label for="foodPrice">Price(cost)</label>
                   </div>
                   <div class="col-md-8 form-group">
-                    <input type="number" min="0" class="form-control" id="foodPriceRating" name="foodPriceRating" placeholder="Enter Price" required>
+                    <input type="number" min="0" class="form-control" id="foodPriceRating" name="foodPriceRating" placeholder="Enter Rating 1-10" required>
                   </div>
                   <div class="col-md-4">
-                    <label for="foodDistance">Distance (in meters)</label>
+                    <label for="foodDistance">Distance (cost)</label>
                   </div>
                   <div class="col-md-8 form-group">
-                    <input type="number" min="0" class="form-control" id="foodDistanceRating" name="foodDistanceRating" placeholder="Enter Distance" required>
+                    <input type="number" min="0" class="form-control" id="foodDistanceRating" name="foodDistanceRating" placeholder="Enter Rating 1-10" required>
                   </div>
                   <div class="col-sm-12 d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary me-1 mb-1">Create Food</button>
+                    <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
                   </div>
                 </div>
               </div>

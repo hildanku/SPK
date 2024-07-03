@@ -5,9 +5,9 @@
   <div class="col-md-12">
     <div class="card">
       <div class="card-header d-flex justify-content-between align-items-center">
-        <h4 class="card-title">Manage Foods</h4>
+        <h4 class="card-title">Manage Food Alternative</h4>
         <div class="d-flex">
-          <a href="/food/create" class="btn btn-primary"> Create Food </a>
+          <a href="/food/create" class="btn btn-primary"> Insert Food Alternative</a>
         </div>
       </div>
       <div class="card-body px-0 pb-0">
@@ -29,8 +29,10 @@
                 <th>Food Name</th>
                 <th>Food Description</th>
                 <th>Taste Rating</th>
-                <th>Risk Disease Rating</th>
-                <th>Age Suitability</th>
+                <th>Risk Rating</th>
+                <th>Age Rating</th>
+                <th>Price Rating</th>
+                <th>Distance Rating</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -42,6 +44,8 @@
                 <td>{{ $data->foodTasteRating }}</td>
                 <td>{{ $data->foodRiskRating }}</td>
                 <td>{{ $data->foodAgeRating }}</td>
+                <td>{{ $data->foodPriceRating }}</td>
+                <td>{{ $data->foodDistanceRating }}</td>
                 <td>
                   <a class="btn btn-primary" href="/food/edit/{{ $data->foodId }}">Edit</a>
                   <button type="button" class="btn btn-danger btn-sm delete-btn" data-food-id="{{ $data->foodId }}" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $data->foodId }}">

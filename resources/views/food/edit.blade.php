@@ -28,25 +28,26 @@
                                         <textarea class="form-control" name="foodDesc" required>{{ $data->foodDesc }}</textarea>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Food Taste Rating</label>
+                                        <label for="foodTasteRating">Taste Rating (benefit)</label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <input type="number" class="form-control" name="foodTasteRating" value="{{ $data->foodTasteRating }}" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Food Risk Disease Rating</label>
+                                        <label for="foodTasteRating">Taste Rating (benefit)</label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <input type="number" class="form-control" name="foodRiskRating" value="{{ $data->foodRiskRating }}" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Food Age Suitability</label>
+                                        <label for="foodAgeSuitability">Age Rating(benefit)</label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <input type="number" class="form-control" name="foodAgeRating" value="{{ $data->foodAgeRating }}" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Food Price</label>
+
+                                        <label for="foodPrice">Price(cost)</label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <input type="number" class="form-control" name="foodPriceRating" value="{{ $data->foodPriceRating }}" required>
